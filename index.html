@@ -6,20 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js"></script>
-    <script>
-        var Tc = prompt("Введите температуру в градусах по Цельсия");
-        var Tf = (Tc * 1.8) + 32;
-        alert("Температура в градусах по Фаренгейту " + Tf);
-    </script>
-    <script>
-var a = 10;
-var b = a++;
-alert("a="+a+"\nb="+b);
-    </script>
+
 <script>
-    var admin = name;
-    var name = "Василий";
-    alert("Получился " +  admin)
+var a = 5; b = 3;
+if (a>-1 && b>-1){
+    alert(a-b);
+}if(a<-1 && b<-1) {
+    alert(a*b);
+}else(a>-1 && b <-1)
+alert(a+b);
+ </script>
+ 
+  <script>
+     var a = 8;
+     switch (a)
+     {
+        case 8:
+            console.log("8");
+                    case 9:
+            console.log("9");
+                    case 10:
+            console.log("10");
+           
+       case 11:
+            console.log("11");
+                    case 12:
+            console.log("12");
+                    case 13:
+            console.log("13");
+                    case 14:
+            console.log("14");
+                    
+            default: console.log("15");
+                }
+
+ </script>
+ <script>
+   
+ function sum(a=0, b=0) {
+       var result = a + b;
+    return result;
+    }
+sum(3,5);
+
+function divide(a=0, b=0){
+    var result = a/b;
+    return result;
+}
+divide(10,2)
+function product(a=0,b=0){
+    var result = a*b;
+    return result;
+}
+product(5,6);
+
+function sub(a=0,b=0){
+    var result = a-b;
+    return result;
+}
+sub(10,5);
+
+ </script>
+ <script>
+
+    function mathOperation(arg1 = 0, arg2=0, operation= ""){
+    switch (mathOperation)
+     {
+    case 3,5:
+sum(arg1,arg2)
+        console.log("Сложение");
+   break;
+    case 10,2:
+    divide(arg1,arg2)
+        console.log("Деление");
+        break;
+    case 1,6:
+        product(arg1,arg2)
+        console.log("Умножение");
+        break;
+    case 12,4:
+        sub(arg1,arg2)
+        console.log("Вычитание"); 
+        break; 
+        default: console.log("Неверное значенние");
+}
+        }
+mathOperation(10,2);
 
 </script>
 </head>
