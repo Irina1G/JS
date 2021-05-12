@@ -8,13 +8,19 @@
     <script src="script.js"></script>
 
 <script>
-var a = 5; b = 3;
-if (a>-1 && b>-1){
-    alert(a-b);
-}if(a<-1 && b<-1) {
-    alert(a*b);
-}else(a>-1 && b <-1)
-alert(a+b);
+var a, b ;
+a = parentInt(promt("Введите число а"));
+b = parentInt(promt("Введите число b"));
+
+if (a>=0 && b>=0){
+    alert("Разность" + (a-b));
+}
+else if(a<0 && b<0) {
+    alert("Произведение" + (a*b));
+}
+else{
+alert("Сумма" + (a+b));
+}
  </script>
  
   <script>
@@ -42,56 +48,52 @@ alert(a+b);
 
  </script>
  <script>
-   
- function sum(a=0, b=0) {
-       var result = a + b;
-    return result;
+   var a,b;
+ function sum(a, b) {
+    return a + b;
     }
-sum(3,5);
 
-function divide(a=0, b=0){
-    var result = a/b;
-    return result;
-}
-divide(10,2)
-function product(a=0,b=0){
-    var result = a*b;
-    return result;
-}
-product(5,6);
 
-function sub(a=0,b=0){
-    var result = a-b;
-    return result;
+function divide(a, b){
+    if(y !=0)    
+    return  a/b;
+    return 0;
 }
-sub(10,5);
+
+function product(a,b){
+        return a*b;
+}
+
+function sub(a,b){
+    return a-b;
+}
 
  </script>
  <script>
+x= +promt("Введите первое число");
+y= +promt("Введите второе число");
+oper= promt("Введите знак + , - , * , /");
 
-    function mathOperation(arg1 = 0, arg2=0, operation= ""){
-    switch (mathOperation)
+    function mathOperation(x, y, oper){
+    switch (oper)
      {
-    case 3,5:
-sum(arg1,arg2)
-        console.log("Сложение");
-   break;
-    case 10,2:
-    divide(arg1,arg2)
-        console.log("Деление");
+    case "+":
+alert(sum(x,y));
+         break;
+    case "/":
+    alert(divide(y,x));
+            break;
+    case "*":
+        alert(product(x,y));
+                break;
+    case "-":
+        alert(sub(x,y));
+                break; 
+        default: 
+        alert("Неверный знак");
         break;
-    case 1,6:
-        product(arg1,arg2)
-        console.log("Умножение");
-        break;
-    case 12,4:
-        sub(arg1,arg2)
-        console.log("Вычитание"); 
-        break; 
-        default: console.log("Неверное значенние");
 }
         }
-mathOperation(10,2);
 
 </script>
 </head>
