@@ -8,86 +8,79 @@
     <script src="script.js"></script>
 
 <script>
-var a, b ;
-a = parentInt(promt("Введите число а"));
-b = parentInt(promt("Введите число b"));
+//var a, b ;
+ //a = parseInt(prompt("Введите число а"));
+ //b = parseInt(prompt("Введите число b"));
 
-if (a>=0 && b>=0){
-    alert("Разность" + (a-b));
-}
-else if(a<0 && b<0) {
-    alert("Произведение" + (a*b));
-}
-else{
-alert("Сумма" + (a+b));
-}
- </script>
- 
-  <script>
-     var a = 8;
-     switch (a)
-     {
-        case 8:
-            console.log("8");
-                    case 9:
-            console.log("9");
-                    case 10:
-            console.log("10");
-           
-       case 11:
-            console.log("11");
-                    case 12:
-            console.log("12");
-                    case 13:
-            console.log("13");
-                    case 14:
-            console.log("14");
+ //if (a>=0 && b>=0){
+   //  alert("Разность " + (a-b));
+ //}
+ //else if(a<0 && b<0) {
+    // alert("Произведение " + (a*b));
+ //}
+ //else{
+ // //alert("Сумма " + (a+b));
+ //}
+ //
+    //  var a = 8;
+     // switch (a)
+     // {
+      //   case 8:
+         //    console.log("8");
+          //           case 9:
+           //  console.log("9");
+           //          case 10:
+            // console.log("10");
+             //      case 11:
+            // console.log("11");
+              //       case 12:
+            // console.log("12");
+            //         case 13:
+            // console.log("13");
+             //        case 14:
+             //console.log("14");
                     
-            default: console.log("15");
-                }
+            // default: console.log("15");
+              //   }
 
- </script>
- <script>
    var a,b;
  function sum(a, b) {
     return a + b;
     }
 
-
-function divide(a, b){
+function div(a, b){
     if(y !=0)    
     return  a/b;
     return 0;
 }
 
-function product(a,b){
+function multy(a,b){
         return a*b;
 }
 
-function sub(a,b){
+function dif(a,b){
     return a-b;
 }
 
- </script>
- <script>
-x= +promt("Введите первое число");
-y= +promt("Введите второе число");
-oper= promt("Введите знак + , - , * , /");
+ 
+x= +prompt("Введите первое число");
+y= +prompt("Введите второе число");
+oper= prompt("Введите знак + , - , * , /");
 
-    function mathOperation(x, y, oper){
+    function mathOperation(a, b, oper){
     switch (oper)
      {
     case "+":
-alert(sum(x,y));
+alert(sum(a,b));
          break;
     case "/":
-    alert(divide(y,x));
+    alert(div(a, b));
             break;
     case "*":
-        alert(product(x,y));
+        alert(multy(a, b));
                 break;
     case "-":
-        alert(sub(x,y));
+        alert(dif(a, b));
                 break; 
         default: 
         alert("Неверный знак");
