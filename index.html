@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
 
 <script>
 //var a, b ;
@@ -22,9 +14,23 @@
  // //alert("Сумма " + (a+b));
  //}
  //
-    //  var a = 8;
+    //  var a = parseInt(prompt("Веедите число а от 1 до 15"));
      // switch (a)
      // {
+         //   case 1:
+         //    console.log("1");
+         //   case 2:
+         //    console.log("2");
+         //   case 3:
+         //    console.log("3");
+         //   case 4:
+         //    console.log("4");
+         //   case 5:
+         //    console.log("5");
+         //   case 6:
+         //    console.log("6");
+         //   case 7:
+         //    console.log("7");
       //   case 8:
          //    console.log("8");
           //           case 9:
@@ -49,32 +55,32 @@
     }
 
 function div(a, b){
-    if(y !=0)    
-    return  a/b;
+    if(y != 0)    
+    return  a /  b;
     return 0;
 }
 
 function multy(a,b){
-        return a*b;
+        return a * b;
 }
 
 function dif(a,b){
-    return a-b;
+    return a - b;
 }
 
  
 x= +prompt("Введите первое число");
 y= +prompt("Введите второе число");
 oper= prompt("Введите знак + , - , * , /");
+mathOperation(x,y,oper);
 
     function mathOperation(a, b, oper){
-    switch (oper)
-     {
+    switch (oper){
     case "+":
-alert(sum(a,b));
+        alert(sum(a,b));
          break;
     case "/":
-    alert(div(a, b));
+        alert(div(a, b));
             break;
     case "*":
         alert(multy(a, b));
@@ -89,8 +95,3 @@ alert(sum(a,b));
         }
 
 </script>
-</head>
-<body>
-    
-</body>
-</html>
