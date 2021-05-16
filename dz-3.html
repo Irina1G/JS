@@ -1,0 +1,86 @@
+<script>
+       
+    // 1 задание
+        var arr = [];
+        var end = 1;
+        while (end < 100){
+            end++;
+            arr.push(end);
+        }
+
+        var a = 2;
+        var b = 2;
+        while (a <= 100){
+            a += b;
+                arr.splice(arr.indexOf(a), 1);
+        }
+
+        a = 4;
+        b = 3;
+        while (a < 100){
+            if (a % b ===0 && arr.indexOf(a) !== -1){
+                arr.splice(arr.indexOf(a), 1);
+            }else {
+                a++;
+            }
+        }
+
+        a = 6;
+        b = 5;
+        while (a < 100) {
+            if (a % b === 0 && arr.indexOf(a) !== -1) {
+                arr.splice(arr.indexOf(a), 1);
+            } else {
+                a++;
+            }
+        }
+
+        a = 8;
+        b = 7;
+        while (a < 100) {
+            if (a % b === 0 && arr.indexOf(a) !== -1) {
+                arr.splice(arr.indexOf(a), 1);
+            } else {
+                a++;
+            }
+        }
+
+        console.log(arr);
+    
+
+        var basket = [
+    {
+        title: "Товар 1",
+        price: 100,
+        count: 1
+        
+    },
+    {
+        title: "Товар 2",
+        price: 200,
+        count: 2
+    },
+    {
+        title: "Товар 3",
+        price: 300,
+        count: 1
+    }
+];
+
+
+function countBasketPrice (mas) {
+  var sumBasket = 0;
+  for(var item  of mas){
+     sumBasket = sumBasket + (item.price * item.count)
+  }
+    return sumBasket;
+};
+
+    console.log("Общая сумма товаров = " + countBasketPrice(basket));
+
+
+</script>
+
+
+
+
