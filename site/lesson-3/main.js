@@ -26,8 +26,8 @@ class List {
     render(){
         const block = document.querySelector(this.container);
         for (let product of this.goods){
-            //console.log(this.constructor.name);
-            const productObj = new this.list[this.constructor.name](product);//мы сделали объект товара либо CartItem, либо ProductItem
+           
+            const productObj = new this.list[this.constructor.name](product);
             console.log(productObj);
             this.allProducts.push(productObj);
             block.insertAdjacentHTML('beforeend', productObj.render());
@@ -45,7 +45,7 @@ class Item{
         this.id_product = el.id_product;
         this.img = img;
     }
-    render(){//генерация товара для каталога товаров
+    render(){
         return `<div class="product-item" data-id="${this.id_product}">
                 <img src="${this.img}" alt="Some img">
                 <div class="desc">
@@ -65,12 +65,12 @@ class ProductsList extends List{
         super(url, container);
         this.cart = cart;
         this.getJson()
-            .then(data => this.handleData(data));//handleData запускает отрисовку либо каталога товаров, либо списка товаров корзины
+            .then(data => this.handleData(data));
     }
     _init(){
         document.querySelector(this.container).addEventListener('click', e => {
             if(e.target.classList.contains('buy-btn')){
-//                console.log(e.target);
+
                 this.cart.addProduct(e.target);
             }
         });
@@ -86,7 +86,7 @@ class Cart extends List{
         super(url, container);
         this.getJson()
             .then(data => {
-                this.handleData(data.contents);//вывели все товары в корзине 
+                this.handleData(data.contents);
             });
     }
     addProduct(element){
@@ -178,8 +178,4 @@ const list2 = {
 
 
 let cart = new Cart();
-let products = new ProductsList(cart);//Если мы хотим использовать в классе
-//методы другого класса, то удобнее всего в конструктор передать объект класса,
-//методы которого нам нужны в данном классе
-//products.getJson(`getProducts.json`).then(data => products.handleData(data));
-
+let products = new ProductsList(cart);
